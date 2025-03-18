@@ -1,6 +1,12 @@
 # Nikonomics Podcast Website
 
-A modern and responsive website for the Nikonomics Podcast, built with HTML, CSS, and JavaScript using Tailwind CSS for styling.
+Nik ([CoFoundersNik on X](https://x.com/CoFoundersNik)) hosts an amazing podcast called **Nikonomics**. Check it out [here](https://www.nikonomicspod.com).
+
+He invested $5k to have the website built, and [Kirill Zubovsky](https://x.com/CoFoundersNik) challenged AI to create one in just 5 minutes for free.
+
+While this iteration isn't as fully featured as the real deal, you can see that with enough prompts, we can get AI to come pretty close!
+
+This is a modern, responsive website for the Nikonomics Podcast, developed with HTML, CSS, and JavaScript and styled using Tailwind CSS.
 
 ## Features
 
