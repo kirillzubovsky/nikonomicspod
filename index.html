@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikonomics Podcast</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        :root {
+            --gold-primary: #DAA520;
+            --gold-light: #FFD700;
+            --gold-dark: #B8860B;
+            --gold-bg-light: #FFF8DC;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            light: '#FFD700',
+                            DEFAULT: '#DAA520',
+                            dark: '#B8860B',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gold-bg-light text-gray-900">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <h1 class="text-2xl font-bold gold-text">Nikonomics</h1>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-700 hover:gold-text px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="#episodes" class="text-gray-700 hover:gold-text px-3 py-2 text-sm font-medium">Episodes</a>
+                    <a href="#about" class="text-gray-700 hover:gold-text px-3 py-2 text-sm font-medium">About</a>
+                    <a href="#subscribe" class="text-gray-700 hover:gold-text px-3 py-2 text-sm font-medium">Subscribe</a>
+                </nav>
+                <div class="md:hidden">
+                    <button type="button" class="text-gray-500 hover:gold-text focus:outline-none focus:gold-text">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="py-12 podcast-gradient text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:flex lg:items-center lg:justify-between">
+                <div class="lg:w-1/2 mb-8 lg:mb-0">
+                    <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl hero-text">
+                        Nikonomics Podcast
+                    </h1>
+                    <p class="mt-4 text-xl text-amber-50">
+                        The best of small biz economics
+                    </p>
+                    <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                        <a href="#subscribe" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gold-dark bg-white hover:bg-gray-50">
+                            Subscribe Now
+                        </a>
+                        <a href="#episodes" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gold-dark hover:bg-amber-700 btn-podcast">
+                            Latest Episodes
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <img class="h-56 w-full object-cover sm:h-72 md:h-80 lg:h-96 rounded-lg shadow-lg" src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Podcast recording setup">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Episodes -->
+    <div id="episodes" class="py-12 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold gold-text sm:text-4xl">
+                    Recent Episodes
+                </h2>
+                <p class="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
+                    Dive into thought-provoking conversations about small business economics
+                </p>
+            </div>
+
+            <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Episode 1 -->
+                <div class="flex flex-col rounded-lg shadow-lg overflow-hidden border border-transparent episode-card">
+                    <div class="flex-shrink-0">
+                        <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Episode cover">
+                    </div>
+                    <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                        <div class="flex-1">
+                            <p class="text-sm font-medium gold-accent">
+                                Latest Episode
+                            </p>
+                            <a href="#" class="block mt-2">
+                                <p class="text-xl font-semibold text-gray-900">
+                                    The Art of Building Brands That Matter
+                                </p>
+                                <p class="mt-3 text-base text-gray-500">
+                                    Exploring what it takes to build a brand that resonates with customers and stands the test of time.
+                                </p>
+                            </a>
+                        </div>
+                        <div class="mt-6 flex items-center">
+                            <div class="flex-shrink-0">
+                                <span class="sr-only">Episode Duration</span>
+                                <div class="text-sm text-gray-500">
+                                    <i class="fas fa-clock mr-1"></i> 58 minutes
+                                </div>
+                            </div>
+                            <div class="ml-3">
+                                <a href="#" class="text-sm font-medium gold-text hover:gold-accent">
+                                    Listen Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Episode 2 -->
+                <div class="flex flex-col rounded-lg shadow-lg overflow-hidden border border-transparent episode-card">
+                    <div class="flex-shrink-0">
+                        <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Episode cover">
+                    </div>
+                    <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                        <div class="flex-1">
+                            <p class="text-sm font-medium gold-accent">
+                                Featured Episode
+                            </p>
+                            <a href="#" class="block mt-2">
+                                <p class="text-xl font-semibold text-gray-900">
+                                    From Startup to Success: A Founder's Journey
+                                </p>
+                                <p class="mt-3 text-base text-gray-500">
+                                    Interviewing successful entrepreneurs about their paths from idea to exit and the lessons learned along the way.
+                                </p>
+                            </a>
+                        </div>
+                        <div class="mt-6 flex items-center">
+                            <div class="flex-shrink-0">
+                                <span class="sr-only">Episode Duration</span>
+                                <div class="text-sm text-gray-500">
+                                    <i class="fas fa-clock mr-1"></i> 62 minutes
+                                </div>
+                            </div>
+                            <div class="ml-3">
+                                <a href="#" class="text-sm font-medium gold-text hover:gold-accent">
+                                    Listen Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Episode 3 -->
+                <div class="flex flex-col rounded-lg shadow-lg overflow-hidden border border-transparent episode-card">
+                    <div class="flex-shrink-0">
+                        <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Episode cover">
+                    </div>
+                    <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                        <div class="flex-1">
+                            <p class="text-sm font-medium gold-accent">
+                                Popular Episode
+                            </p>
+                            <a href="#" class="block mt-2">
+                                <p class="text-xl font-semibold text-gray-900">
+                                    The Hidden Economics of Small Business Financing
+                                </p>
+                                <p class="mt-3 text-base text-gray-500">
+                                    Diving into the complex world of small business funding and exploring the best strategies for growth.
+                                </p>
+                            </a>
+                        </div>
+                        <div class="mt-6 flex items-center">
+                            <div class="flex-shrink-0">
+                                <span class="sr-only">Episode Duration</span>
+                                <div class="text-sm text-gray-500">
+                                    <i class="fas fa-clock mr-1"></i> 55 minutes
+                                </div>
+                            </div>
+                            <div class="ml-3">
+                                <a href="#" class="text-sm font-medium gold-text hover:gold-accent">
+                                    Listen Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-10 text-center">
+                <a href="#" class="inline-flex items-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gold-dark hover:bg-amber-700 btn-podcast">
+                    View All Episodes
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="py-12 bg-amber-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
+                <div>
+                    <h2 class="text-3xl font-extrabold gold-text sm:text-4xl">
+                        About the pod
+                    </h2>
+                    <p class="mt-3 max-w-3xl text-lg text-gray-500">
+                        I started Nikonomics to focus on the economics of small business. We delve into the dynamic world of entrepreneurship, offering listeners a deep dive into the mechanics, strategies and stories behind successful ventures with the founders themselves!
+                    </p>
+                    <p class="mt-3 max-w-3xl text-lg text-gray-500">
+                        Each episode aims to educate on different business models, offer practical advice, and provide inspirational anecdotes to help expand the definition of "what is possible" for business owners and aspiring entrepreneurs.
+                    </p>
+                    <div class="mt-8">
+                        <div class="flex items-center">
+                            <img class="h-16 w-16 rounded-full border-2 gold-border" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Nik Hulewsky">
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium gold-text">Nik Hulewsky</h3>
+                                <p class="text-base text-gray-500">Host & Producer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-10 lg:mt-0">
+                    <img class="rounded-lg shadow-lg" src="https://images.unsplash.com/photo-1561883088-039e53143d73?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Podcast recording">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Section -->
+    <div class="py-12 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
+                <div>
+                    <h2 class="text-3xl font-extrabold gold-text sm:text-4xl">
+                        New videos every week
+                    </h2>
+                    <p class="mt-3 max-w-3xl text-lg text-gray-500">
+                        Nikonomics is the go-to podcast for Entrepreneurs, Wantrapreneurs and Searchers navigating the entrepreneurial maze. Join me as I use humor and hardcore business acumen to offer sage advice, with a smirk.
+                    </p>
+                    <div class="mt-8">
+                        <a href="https://www.youtube.com/@NikonomicsPod" class="inline-flex items-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gold-dark hover:bg-amber-700 btn-podcast">
+                            <i class="fab fa-youtube mr-2"></i> Visit YouTube
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-10 lg:mt-0">
+                    <div class="aspect-w-16 aspect-h-9 rounded-lg shadow-lg overflow-hidden">
+                        <iframe class="w-full h-56 sm:h-72 md:h-80 lg:h-96" src="https://www.youtube.com/embed/videoseries?list=YOUR_PLAYLIST_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Host Bio Section -->
+    <div class="py-12 bg-amber-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold gold-text sm:text-4xl">
+                    Who's Running This Operation?
+                </h2>
+            </div>
+            <div class="lg:grid lg:grid-cols-3 lg:gap-8">
+                <div class="lg:col-span-1">
+                    <img class="rounded-lg shadow-lg w-full" src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Nik Hulewsky">
+                </div>
+                <div class="mt-10 lg:mt-0 lg:col-span-2">
+                    <p class="text-lg text-gray-500">
+                        Hey! I'm Nik Hulewsky. I'm a seasoned entrepreneur and trusted advisor, who loves problem solving, helping people and having fun. I've owned and operated over a dozen companies across multiple industries, including healthcare, e-commerce, and crypto.
+                    </p>
+                    <p class="mt-4 text-lg text-gray-500">
+                        I've had multiple 7-figure exits—and, in the spirit of full transparency, an equal number of 7-figure lessons learned (losses). I have an undergraduate degree from the University of Southern California in Economics and an MBA from UCLA.
+                    </p>
+                    <p class="mt-4 text-lg text-gray-500">
+                        I have been married for almost 16 years and have 4 boys at home ages 10, 7, 4 and 2.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Subscribe Section -->
+    <div id="subscribe" class="py-12 bg-gold-dark">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
+                    Subscribe to Nikonomics
+                </h2>
+                <p class="mt-3 max-w-2xl mx-auto text-xl text-amber-100">
+                    Never miss an episode. Available wherever you get your podcasts.
+                </p>
+            </div>
+            <div class="mt-10 max-w-xl mx-auto">
+                <div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
+                    <a href="https://podcasts.apple.com/us/podcast/nikonomics/id1234567890" class="flex justify-center py-4 px-8 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <span class="sr-only">Apple Podcasts</span>
+                        <i class="fab fa-apple text-3xl gold-text"></i>
+                    </a>
+                    <a href="https://open.spotify.com/show/123456789" class="flex justify-center py-4 px-8 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <span class="sr-only">Spotify</span>
+                        <i class="fab fa-spotify text-3xl gold-text"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@NikonomicsPod" class="flex justify-center py-4 px-8 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <span class="sr-only">YouTube</span>
+                        <i class="fab fa-youtube text-3xl gold-text"></i>
+                    </a>
+                    <a href="https://buzzsprout.com/12345" class="flex justify-center py-4 px-8 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <span class="sr-only">Buzzsprout</span>
+                        <i class="fas fa-rss text-3xl gold-text"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter Section -->
+    <div class="py-12 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold gold-text sm:text-4xl">
+                    Check Out My Newsletter
+                </h2>
+                <p class="mt-3 max-w-2xl mx-auto text-xl text-gray-500">
+                    Subscribe to learn more about small business economics & have some real fun. I look forward to seeing you there!
+                </p>
+            </div>
+            <div class="mt-8 max-w-lg mx-auto">
+                <form action="#" method="POST" class="sm:flex">
+                    <label for="email-address" class="sr-only">Email address</label>
+                    <input id="email-address" name="email" type="email" autocomplete="email" required class="w-full px-5 py-3 border border-gray-300 shadow-sm placeholder-gray-400 focus:ring-1 focus:ring-gold-dark focus:border-gold-dark sm:max-w-xs rounded-md" placeholder="Enter your email">
+                    <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+                        <button type="submit" class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gold-dark hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gold-dark btn-podcast">
+                            Subscribe
+                        </button>
+                    </div>
+                </form>
+                <p class="mt-3 text-sm text-gray-500">
+                    We care about your data. Read our <a href="#" class="font-medium gold-text hover:gold-accent">Privacy Policy</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900">
+        <div class="max-w-6xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <div class="space-y-8 xl:col-span-1">
+                    <h2 class="text-2xl font-bold text-gold-light">Nikonomics</h2>
+                    <p class="text-gray-300 text-base">
+                        The best of small biz economics
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="https://twitter.com/NikonomicsPod" class="text-gold-light hover:text-amber-300">
+                            <span class="sr-only">Twitter</span>
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="https://instagram.com/NikonomicsPod" class="text-gold-light hover:text-amber-300">
+                            <span class="sr-only">Instagram</span>
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://youtube.com/@NikonomicsPod" class="text-gold-light hover:text-amber-300">
+                            <span class="sr-only">YouTube</span>
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/nikhulewsky" class="text-gold-light hover:text-amber-300">
+                            <span class="sr-only">LinkedIn</span>
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold text-gold-light tracking-wider uppercase">
+                                Navigation
+                            </h3>
+                            <ul class="mt-4 space-y-4">
+                                <li>
+                                    <a href="#" class="text-base text-gray-300 hover:text-gold-light">
+                                        Home
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#episodes" class="text-base text-gray-300 hover:text-gold-light">
+                                        Episodes
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#about" class="text-base text-gray-300 hover:text-gold-light">
+                                        About
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#subscribe" class="text-base text-gray-300 hover:text-gold-light">
+                                        Subscribe
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-sm font-semibold text-gold-light tracking-wider uppercase">
+                                Connect
+                            </h3>
+                            <ul class="mt-4 space-y-4">
+                                <li>
+                                    <a href="#" class="text-base text-gray-300 hover:text-gold-light">
+                                        Contact Us
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-300 hover:text-gold-light">
+                                        Sponsorship
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-300 hover:text-gold-light">
+                                        Support the Show
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8">
+                <p class="text-base text-gray-400 xl:text-center">
+                    &copy; 2023 Nikonomics Podcast. All rights reserved. Powered by Outerbloc
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html> 
